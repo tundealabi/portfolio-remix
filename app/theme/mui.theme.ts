@@ -13,11 +13,16 @@ const mode = {
       dark: '#83807C',
       light: '#E7E6E4',
     },
+    divider: '#BF7506',
   },
   dark: {
     primary: {
       main: '#00ffff',
     },
+    secondary: {
+      main: '#fff',
+    },
+    divider: '#fff',
   },
 };
 
@@ -33,34 +38,34 @@ export const createMuiTheme = (palletMode: PalletMode) => {
         fontFamily: 'Inter',
         fontSize: '3rem',
         fontWeight: 'bold',
-        lineHeight: '125%',
+        // lineHeight: '125%',
         letterSpacing: '-0.03em',
       },
       h2: {
         fontFamily: 'Inter',
         fontWeight: 'bold',
         fontSize: '2rem',
-        lineHeight: '125%',
+        // lineHeight: '125%',
         letterSpacing: '-0.03em',
       },
       h3: {
         fontFamily: 'Inter',
         fontWeight: 'bold',
         fontSize: '1.5rem',
-        lineHeight: '135%',
+        // lineHeight: '135%',
         letterSpacing: '-0.02em',
       },
       body1: {
         fontFamily: 'Inter',
         fontWeight: 'normal',
         fontSize: '1rem',
-        lineHeight: '150%',
+        // lineHeight: '150%',
       },
       body2: {
         fontFamily: 'Inter',
         fontWeight: 'normal',
         fontSize: '0.75rem',
-        lineHeight: '150%',
+        // lineHeight: '150%',
       },
     },
   });
