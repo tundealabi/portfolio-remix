@@ -10,7 +10,10 @@ const Header = () => {
   const colorModeContext = useContext(ColorModeContext);
   const theme = useTheme();
   return (
-    <AppBar sx={{ mb: theme.spacing(5) }} color="transparent">
+    <AppBar
+      sx={{ mb: theme.spacing(5), boxShadow: 'none' }}
+      color="transparent"
+    >
       <Toolbar sx={{ justifyContent: 'flex-end' }}>
         <FormControlLabel
           control={
