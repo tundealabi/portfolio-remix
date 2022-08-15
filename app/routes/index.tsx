@@ -91,11 +91,7 @@ export default function Index() {
         <Header />
         <StyledContainer>
           <WaveHandImageBox>
-            <img
-              src="../assets/wave_hand.png"
-              alt="wave"
-              // style={waveHandStyle}
-            />
+            <img src="../assets/wave_hand.png" alt="wave" />
           </WaveHandImageBox>
           {/* INTRODUCTION SECTION - START */}
           <StyledHeaderBox>
@@ -119,10 +115,10 @@ export default function Index() {
             >
               <Typography variant="h3" color="secondary">
                 <Typography variant="h3" color="primary.dark" component="span">
-                  Frontend Developer and Designer.
+                  Frontend and Backend Developer.
                 </Typography>{' '}
-                I learn and teach everything about Web Technologies and Product
-                Design.
+                I enjoy thinking up solutions and making functionalities reach
+                implementation.
               </Typography>
             </Box>
             <Box
@@ -185,12 +181,7 @@ export default function Index() {
             }}
           >
             <StyledCodeImageBox>
-              <img
-                src="../assets/code1.png"
-                alt="wave"
-                // width="100%"
-                // style={codeImageStyle}
-              />
+              <img src="../assets/code1.png" alt="wave" />
             </StyledCodeImageBox>
             <StyledNiceToMeetYouBox>
               <Typography variant="h3" color="secondary">
@@ -204,8 +195,8 @@ export default function Index() {
                 I am Tunde Alabi
               </Typography>
               <Typography variant="body1" color="secondary">
-                Working full time in Angular, Typescript and SCSS, leading the
-                team for revamping DotCMS administration system.
+                Working to build products that scale and deliver a performant
+                solution to end-users.
               </Typography>
               <Typography
                 variant="h2"
@@ -215,9 +206,10 @@ export default function Index() {
                 Code, Design, Learn and Teach.
               </Typography>
               <Typography variant="body1" color="secondary">
-                Frontend is my true passion and I really enjoy the whole process
-                of creating UIs, from the first brainstorming, wireframes,
-                mockups, design, all the way until the final product.
+                I tend to view myself as a generalist since I try not to focus
+                on any given technology but rather love playing around and
+                trying out different technologies. I can be the X-factor in your
+                team.
               </Typography>
             </StyledNiceToMeetYouBox>
           </Box>

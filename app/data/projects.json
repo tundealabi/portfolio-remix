@@ -12,36 +12,60 @@
           "tags": ["NextJs", "Typescript", "MongoDB"]
         },
         {
-          "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Vibeoo(radio on demand)",
-          "description": "A web Application for Radio On Demand Contents",
+          "banner": "https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+          "title": "Vibeoo Dashboard",
+          "description": "A web Application for Managing Vibeoo's Curators Contents",
           "repositoryLink": "",
-          "hostedLink": "https://www.vibeoo.com/",
+          "hostedLink": "https://dashboard.vibeoo.com/",
+          "tags": ["NuxtJs", "VueJs", "MongoDB", "ExpressJs"]
+        },
+        {
+          "banner": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80",
+          "title": "Dealpot",
+          "description": "With DealPot users can track the best deals on various online shopping platforms.",
+          "repositoryLink": "https://github.com/tundealabi/dealpot-nextjs",
+          "hostedLink": "https://dealpot-nextjs.vercel.app/",
           "tags": ["NextJs", "Typescript", "MongoDB"]
         },
         {
-          "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Vibeoo(radio on demand) two",
-          "description": "A web Application for Radio On Demand Contents",
-          "repositoryLink": "",
-          "hostedLink": "https://www.vibeoo.com/",
-          "tags": ["NextJs", "Typescript", "MongoDB"]
+          "banner": "https://images.unsplash.com/photo-1546074177-ffdda98d214f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+          "title": "Rss Feeds Blog",
+          "description": "Allows you to get feeds from RSS you have listed to follow",
+          "repositoryLink": "https://github.com/tundealabi/rss_feeds_blog",
+          "hostedLink": "https://rss-feeds-blog.herokuapp.com/",
+          "tags": ["NextJs", "Typescript", "MongoDB", "NestJs"]
         },
         {
-          "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Vibeoo(radio on demand) three",
-          "description": "A web Application for Radio On Demand Contents",
-          "repositoryLink": "",
-          "hostedLink": "https://www.vibeoo.com/",
-          "tags": ["NextJs", "Typescript", "MongoDB"]
+          "banner": "https://images.unsplash.com/photo-1565230698474-2a8a500c35cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1087&q=80",
+          "title": "Face Recog",
+          "description": "An application that finds all human faces on any image",
+          "repositoryLink": "https://github.com/tundealabi/face-recognition",
+          "hostedLink": "https://app-face-recog.netlify.app/",
+          "tags": ["ReactJs", "Typescript", "Firebase"]
         },
         {
-          "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Vibeoo(radio on demand) four",
-          "description": "A web Application for Radio On Demand Contents",
-          "repositoryLink": "",
-          "hostedLink": "https://www.vibeoo.com/",
-          "tags": ["NextJs", "Typescript", "MongoDB"]
+          "banner": "https://images.unsplash.com/photo-1566828861533-2cc1ffb1f067?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1772&q=80",
+          "title": "Face Recog Server",
+          "description": "The server for Face Recog",
+          "repositoryLink": "https://github.com/tundealabi/face-recog-api",
+          "hostedLink": "",
+          "tags": ["ExpressJs", "PostgresSQL", "KnexJs"]
+        },
+        {
+          "banner": "https://images.unsplash.com/photo-1585859158547-250b39b92779?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1685&q=80",
+          "title": "Spell-it",
+          "description": "Helps users practice their spelling by playing the audio recording of a word the user must then spell using their device keyboard.",
+          "repositoryLink": "https://github.com/tundealabi/Spell-It-App",
+          "hostedLink": "https://spell-it-app.netlify.app/",
+          "tags": ["HTML", "CSS", "Javascript"]
+        },
+        {
+          "banner": "https://images.unsplash.com/photo-1614032686163-bdc24c13d0b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+          "title": "Rock|Paper|Scissors",
+          "description": "Simple implementation of Rock Paper Scissors game.",
+          "repositoryLink": "https://github.com/tundealabi/rock-paper-scissors-react",
+          "hostedLink": "https://tundealabi.github.io/rock-paper-scissors-react/",
+          "tags": ["ReactJs", "Webpack"]
         }
       ]
     },
@@ -51,38 +75,6 @@
         {
           "banner": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
           "title": "Signal Chat App",
-          "description": "A Signal chat app(react native clone)",
-          "repositoryLink": "https://github.com/tundealabi/signal-clone-react-native",
-          "hostedLink": "",
-          "tags": ["React Native", "Firebase"]
-        },
-        {
-          "banner": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Signal Chat App Two",
-          "description": "A Signal chat app(react native clone)",
-          "repositoryLink": "https://github.com/tundealabi/signal-clone-react-native",
-          "hostedLink": "",
-          "tags": ["React Native", "Firebase"]
-        },
-        {
-          "banner": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Signal Chat App Three",
-          "description": "A Signal chat app(react native clone)",
-          "repositoryLink": "https://github.com/tundealabi/signal-clone-react-native",
-          "hostedLink": "",
-          "tags": ["React Native", "Firebase"]
-        },
-        {
-          "banner": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Signal Chat App Four",
-          "description": "A Signal chat app(react native clone)",
-          "repositoryLink": "https://github.com/tundealabi/signal-clone-react-native",
-          "hostedLink": "",
-          "tags": ["React Native", "Firebase"]
-        },
-        {
-          "banner": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Signal Chat App Four",
           "description": "A Signal chat app(react native clone)",
           "repositoryLink": "https://github.com/tundealabi/signal-clone-react-native",
           "hostedLink": "",

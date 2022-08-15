@@ -68,13 +68,13 @@ const Card = ({ project }: ICard) => {
     <CardComponent>
       <CardMedia
         component="img"
-        height="250"
+        height="300"
         image={project.banner}
         alt={project.title}
       />
       <CardContent>
         <Typography variant="h3" color="primary.dark">
-          {project.description}
+          {project.title}
         </Typography>
         <Stack
           direction="row"

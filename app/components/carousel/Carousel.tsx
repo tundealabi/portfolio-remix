@@ -33,7 +33,13 @@ interface IProjectCarousel {
 
 const ProjectCarousel = ({ projects }: IProjectCarousel) => {
   return (
-    <StyledCarousel ssr partialVisible responsive={responsive}>
+    <StyledCarousel
+      centerMode={false}
+      ssr
+      partialVisible
+      infinite
+      responsive={responsive}
+    >
       {projects.map((project) => (
         <Card key={project.title} project={project} />
       ))}
