@@ -52,7 +52,7 @@ export const createMuiTheme = (palletMode: PalletMode) => {
         fontFamily: 'Inter',
         fontWeight: 'bold',
         fontSize: '1.5rem',
-        // lineHeight: '135%',
+        lineHeight: 1.543,
         letterSpacing: '-0.02em',
       },
       body1: {
