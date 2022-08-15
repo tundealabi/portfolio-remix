@@ -1,5 +1,6 @@
 export const skills = () => {
   return [
+    'Remixjs',
     'Nextjs',
     'Nuxtjs',
     'Reactjs',

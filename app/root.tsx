@@ -7,10 +7,23 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react';
+// import styles from 'react-multi-carousel/lib/styles.css';
+import type { LinksFunction } from '@remix-run/node'; // or cloudflare/deno
+
+// console.log(styles);
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: 'stylesheet',
+      href: 'https://unpkg.com/react-multi-carousel@2.8.2/lib/styles.css',
+    },
+  ];
+};
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
-  title: 'Portfolio',
+  title: 'Tunde Alabi | Portfolio',
   viewport: 'width=device-width,initial-scale=1',
 });
 

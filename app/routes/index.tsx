@@ -1,15 +1,9 @@
-import { Box, Container, Typography, useMediaQuery } from '@mui/material';
-import { ThemeProvider, type SxProps } from '@mui/system';
-import { styled, responsiveFontSizes } from '@mui/material/styles';
+import { Box, Typography, useMediaQuery } from '@mui/material';
+import { ThemeProvider } from '@mui/system';
+import { responsiveFontSizes } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import React, {
-  type CSSProperties,
-  useLayoutEffect,
-  useMemo,
-  useState,
-  useRef,
-} from 'react';
-import { Header } from '~/components';
+import React, { useLayoutEffect, useMemo, useState, useRef } from 'react';
+import { Header, ProjectCarousel } from '~/components';
 import { Social } from '~/components/atoms';
 import { ColorModeContext } from '~/context';
 import type { PalletMode } from '~/interfaces';
@@ -19,49 +13,24 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import { skills } from '~/data';
-import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
+import { json } from '@remix-run/node';
+import { getProjects } from '~/models';
+import { useLoaderData } from '@remix-run/react';
+import TypewriterComponent from 'typewriter-effect';
+import {
+  WaveHandImageBox,
+  StyledHeaderBox,
+  StyledDownloadCvBox,
+  StyledCodeImageBox,
+  StyledChip,
+  StyledContainer,
+  StyledNiceToMeetYouBox,
+} from '~/styles';
 
 // suppress server-side warning
 if (typeof window === 'undefined') React.useLayoutEffect = () => {};
 
-const HeaderBoxStyle: SxProps = {
-  width: '45%',
-  margin: '4rem auto 6rem',
-};
-
-const waveHandStyle: CSSProperties = {
-  position: 'absolute',
-  top: '-10%',
-  left: '-8%',
-};
-
-// const pointHandStyle: CSSProperties = {
-//   position: 'absolute',
-//   top: '43%',
-//   right: '-35%',
-// };
-const DownloadCvBox = styled(Box)(({ theme }) => ({
-  alignItem: 'center',
-  columnGap: theme.spacing(1),
-  cursor: 'pointer',
-  display: 'flex',
-  px: theme.spacing(1),
-  borderBottom: '2px solid transparent',
-  transition: 'border-bottom 2s',
-  '&:hover': {
-    borderBottom: `2px solid ${theme.palette.divider}`,
-  },
-}));
-
-const codeImageStyle: CSSProperties = {
-  borderRadius: '20px',
-};
-
-const StyledChip = styled(Chip)(({ theme }) => ({
-  borderRadius: '4px',
-  border: `1px solid ${theme.palette.primary.dark}`,
-}));
 // Social Icons array
 const socialIcons = [
   {
@@ -71,7 +40,19 @@ const socialIcons = [
   { link: 'https://github.com/tundealabi', icon: <GitHubIcon /> },
   { link: 'https://twitter.com/tunde_grey', icon: <TwitterIcon /> },
 ];
+
+type LoaderData = {
+  projects: Awaited<ReturnType<typeof getProjects>>;
+};
+
+export const loader = async () => {
+  return json<LoaderData>({
+    projects: await getProjects(),
+  });
+};
+
 export default function Index() {
+  const { projects } = useLoaderData() as LoaderData;
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [mode, setMode] = useState<PalletMode>('light');
   const cvDownloadAnchorRef = useRef<HTMLAnchorElement>(null);
@@ -108,22 +89,28 @@ export default function Index() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Header />
-        <Container
-          sx={{
-            mt: theme.spacing(10),
-            mx: theme.spacing(12),
-            position: 'absolute',
-          }}
-        >
-          <img src="../assets/wave_hand.png" alt="wave" style={waveHandStyle} />
+        <StyledContainer>
+          <WaveHandImageBox>
+            <img
+              src="../assets/wave_hand.png"
+              alt="wave"
+              // style={waveHandStyle}
+            />
+          </WaveHandImageBox>
           {/* INTRODUCTION SECTION - START */}
-          <Box sx={HeaderBoxStyle}>
+          <StyledHeaderBox>
             <Typography
               variant="h1"
               color="secondary"
               sx={{ mb: theme.spacing(1) }}
             >
-              I'm Tunde Alabi
+              <TypewriterComponent
+                options={{
+                  strings: "I'm Tunde Alabi",
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
             </Typography>
             <Box
               sx={{
@@ -156,7 +143,7 @@ export default function Index() {
                   </Social>
                 ))}
               </Box>
-              <DownloadCvBox onClick={handleDownloadCv}>
+              <StyledDownloadCvBox onClick={handleDownloadCv}>
                 <AttachFileIcon />
                 Download CV
                 <a
@@ -167,10 +154,26 @@ export default function Index() {
                 >
                   cv download link
                 </a>
-              </DownloadCvBox>
+              </StyledDownloadCvBox>
             </Box>
-          </Box>
+          </StyledHeaderBox>
           {/* INTRODUCTION SECTION - END */}
+          {/* PROJECTS SECTION - START */}
+          <Box>
+            {projects.map((project) => (
+              <Box sx={{ mb: theme.spacing(16) }} key={project.category}>
+                <Typography
+                  variant="h2"
+                  color="primary.dark"
+                  sx={{ mb: theme.spacing(2) }}
+                >
+                  {project.category} Projects
+                </Typography>
+                <ProjectCarousel projects={project.projects} />
+              </Box>
+            ))}
+          </Box>
+          {/* PROJECTS SECTION - END */}
           {/* NICE TO MEET YOU SECTION - START */}
           <Box
             sx={{
@@ -181,24 +184,15 @@ export default function Index() {
               mb: theme.spacing(6),
             }}
           >
-            <Box
-              sx={{
-                flexBasis: '38%',
-              }}
-            >
+            <StyledCodeImageBox>
               <img
                 src="../assets/code1.png"
                 alt="wave"
-                width="100%"
-                // height="40%"
-                style={codeImageStyle}
+                // width="100%"
+                // style={codeImageStyle}
               />
-            </Box>
-            <Box
-              sx={{
-                flexBasis: '50%',
-              }}
-            >
+            </StyledCodeImageBox>
+            <StyledNiceToMeetYouBox>
               <Typography variant="h3" color="secondary">
                 Nice to meet you,
               </Typography>
@@ -225,20 +219,13 @@ export default function Index() {
                 of creating UIs, from the first brainstorming, wireframes,
                 mockups, design, all the way until the final product.
               </Typography>
-            </Box>
+            </StyledNiceToMeetYouBox>
           </Box>
           <Box
             sx={{
               mb: theme.spacing(14),
-              position: 'relative',
-              // overflow: 'hidden',
             }}
           >
-            {/* <img
-              src="../assets/point_hand.png"
-              alt="point_hand"
-              style={pointHandStyle}
-            /> */}
             <Typography
               variant="h3"
               color="secondary"
@@ -260,7 +247,7 @@ export default function Index() {
             </Stack>
           </Box>
           {/* NICE TO MEET YOU SECTION - END */}
-        </Container>
+        </StyledContainer>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
