@@ -143,7 +143,7 @@ export default function Index() {
                 <AttachFileIcon />
                 Download CV
                 <a
-                  href="../assets/t-resume.pdf"
+                  href="../assets/akintunde-alabi-resume.pdf"
                   download
                   hidden
                   ref={cvDownloadAnchorRef}
