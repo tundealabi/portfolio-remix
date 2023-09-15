@@ -4,6 +4,14 @@
       "category": "Web",
       "projects": [
         {
+          "banner": "https://supacelebs.com/_next/image?url=%2Fassets%2Fimages%2Fdownload-group.png&w=3840&q=75",
+          "title": "SupaCelebs(connect with your favorite celebrities)",
+          "description": "A digital platform that connects celebrities and fans via exclusive and personalized content.",
+          "repositoryLink": "",
+          "hostedLink": "https://supacelebs.com/",
+          "tags": ["NextJs", "NestJs", "Typescript", "MySQL"]
+        },
+        {
           "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
           "title": "Vibeoo(radio on demand)",
           "description": "A web Application for Radio On Demand Contents",

@@ -18,10 +18,11 @@ export const skills = () => {
     'Heroku',
     'Netlify',
     'Vercel',
-    'AWS-s3',
+    'AWS',
     'CI/CD',
     'Jest',
     'Cypress',
     'React Native',
+    'C#',
   ];
 };
