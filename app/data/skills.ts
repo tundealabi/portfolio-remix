@@ -24,5 +24,6 @@ export const skills = () => {
     'Cypress',
     'React Native',
     'C#',
+    'Google Analytics',
   ];
 };

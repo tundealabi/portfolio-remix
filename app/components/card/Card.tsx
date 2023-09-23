@@ -59,10 +59,11 @@ const CardLinkBox = styled(Box)<ICardLinkBox>(({ theme }) => ({
 }));
 
 interface ICard {
+  isCertification?: boolean;
   project: IProject;
 }
 
-const Card = ({ project }: ICard) => {
+const Card = ({ isCertification, project }: ICard) => {
   const theme = useTheme();
   return (
     <CardComponent>
@@ -96,24 +97,38 @@ const Card = ({ project }: ICard) => {
             marginBottom: theme.spacing(7),
           }}
         >
-          <CardLinkBox
-            component="a"
-            href={project.repositoryLink}
-            target={project.repositoryLink ? '_blank' : '_self'}
-            rel="noreferrer"
-          >
-            <CodeIcon />
-            Code
-          </CardLinkBox>
-          <CardLinkBox
-            component="a"
-            href={project.hostedLink}
-            target={project.hostedLink ? '_blank' : '_self'}
-            rel="noreferrer"
-          >
-            <WebIcon />
-            Demo
-          </CardLinkBox>
+          {isCertification ? (
+            <CardLinkBox
+              component="a"
+              href={project.hostedLink}
+              target={project.hostedLink ? '_blank' : '_self'}
+              rel="noreferrer"
+            >
+              <WebIcon />
+              Visit
+            </CardLinkBox>
+          ) : (
+            <>
+              <CardLinkBox
+                component="a"
+                href={project.repositoryLink || ''}
+                target={project.repositoryLink ? '_blank' : '_self'}
+                rel="noreferrer"
+              >
+                <CodeIcon />
+                Code
+              </CardLinkBox>
+              <CardLinkBox
+                component="a"
+                href={project.hostedLink}
+                target={project.hostedLink ? '_blank' : '_self'}
+                rel="noreferrer"
+              >
+                <WebIcon />
+                Demo
+              </CardLinkBox>
+            </>
+          )}
         </Box>
       </CardContent>
     </CardComponent>

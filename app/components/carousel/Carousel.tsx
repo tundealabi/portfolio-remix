@@ -1,7 +1,6 @@
 import { styled } from '@mui/system';
 import Carousel from 'react-multi-carousel';
-import type { IProject } from '~/models';
-import Card from '../card/Card';
+import type { FC, PropsWithChildren } from 'react';
 
 const StyledCarousel = styled(Carousel)(({ theme }) => ({
   '.react-multi-carousel-track': {
@@ -27,11 +26,7 @@ const responsive = {
   },
 };
 
-interface IProjectCarousel {
-  projects: IProject[];
-}
-
-const ProjectCarousel = ({ projects }: IProjectCarousel) => {
+const ProjectCarousel: FC<PropsWithChildren> = ({ children }) => {
   return (
     <StyledCarousel
       centerMode={false}
@@ -40,9 +35,7 @@ const ProjectCarousel = ({ projects }: IProjectCarousel) => {
       infinite
       responsive={responsive}
     >
-      {projects.map((project) => (
-        <Card key={project.title} project={project} />
-      ))}
+      {children}
     </StyledCarousel>
   );
 };

@@ -2,14 +2,14 @@ import projects from '../data/projects.json';
 
 interface IProjectJson {
   category: string;
-  projects: IProject[];
+  items: IProject[];
 }
 
 export interface IProject {
   banner: string;
   title: string;
   description: string;
-  repositoryLink: string;
+  repositoryLink?: string;
   hostedLink: string;
   tags: string[];
 }
