@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/system';
 import { responsiveFontSizes } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import React, { useLayoutEffect, useMemo, useState, useRef } from 'react';
-import { Header, ProjectCarousel } from '~/components';
+import { Card, Header, ProjectCarousel } from '~/components';
 import { Social } from '~/components/atoms';
 import { ColorModeContext } from '~/context';
 import type { PalletMode } from '~/interfaces';
@@ -163,9 +163,17 @@ export default function Index() {
                   color="primary.dark"
                   sx={{ mb: theme.spacing(2) }}
                 >
-                  {project.category} Projects
+                  {project.category}
                 </Typography>
-                <ProjectCarousel projects={project.projects} />
+                <ProjectCarousel>
+                  {project.items.map((item) => (
+                    <Card
+                      key={item.title}
+                      project={item}
+                      isCertification={project.category === 'Certifications'}
+                    />
+                  ))}
+                </ProjectCarousel>
               </Box>
             ))}
           </Box>
