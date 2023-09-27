@@ -9,6 +9,7 @@ import {
 } from '@remix-run/react';
 // import styles from 'react-multi-carousel/lib/styles.css';
 import type { LinksFunction } from '@remix-run/node'; // or cloudflare/deno
+import { Analytics } from '@vercel/analytics/react';
 
 // console.log(styles);
 
@@ -45,6 +46,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Analytics />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
