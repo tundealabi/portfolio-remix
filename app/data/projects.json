@@ -4,6 +4,14 @@
       "category": "Web Projects",
       "items": [
         {
+          "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
+          "title": "Vibeoo(radio on demand)",
+          "description": "A web Application for Radio On Demand Contents",
+          "repositoryLink": "",
+          "hostedLink": "https://www.vibeoo.com/",
+          "tags": ["NextJs", "Typescript", "MongoDB"]
+        },
+        {
           "banner": "https://supacelebs.com/_next/image?url=%2Fassets%2Fimages%2Fdownload-group.png&w=3840&q=75",
           "title": "SupaCelebs(connect with your favorite celebrities)",
           "description": "A digital platform that connects celebrities and fans via exclusive and personalized content.",
@@ -12,12 +20,12 @@
           "tags": ["NextJs", "NestJs", "Typescript", "MySQL"]
         },
         {
-          "banner": "https://images.unsplash.com/photo-1507246207829-732ed643ea0a?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800",
-          "title": "Vibeoo(radio on demand)",
-          "description": "A web Application for Radio On Demand Contents",
+          "banner": "https://jamesfarmertech.com/_next/image?url=%2Fassets%2Fimages%2Flogo.png&w=128&q=75",
+          "title": "James Farmer Tech",
+          "description": "A platform for discovering the best energy source for your everyday usage based on your budget, driving habits and lifestyle.",
           "repositoryLink": "",
-          "hostedLink": "https://www.vibeoo.com/",
-          "tags": ["NextJs", "Typescript", "MongoDB"]
+          "hostedLink": "https://jamesfarmertech.com/",
+          "tags": ["NextJs", "Typescript", "Contentful CMS"]
         },
         {
           "banner": "https://images.unsplash.com/photo-1532102235608-dc8fc689c9ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
